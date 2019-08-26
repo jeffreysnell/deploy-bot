@@ -1,0 +1,50 @@
+{
+  "name": "deploy-bot",
+  "version": "1.0.0",
+  "description": "A probot app that opens merge PRs from staging to master automatically.",
+  "author": "Jeff Snell <jeff.snell@pagecloud.com>",
+  "license": "ISC",
+  "repository": "https://github.com//deploy-bot.git",
+  "homepage": "https://github.com//deploy-bot",
+  "bugs": "https://github.com//deploy-bot/issues",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "dev": "PORT=3030 nodemon",
+    "start": "probot run ./index.js",
+    "lint": "standard --fix",
+    "test": "jest && standard",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+  },
+  "dependencies": {
+    "probot": "^7.2.0"
+  },
+  "devDependencies": {
+    "jest": "^24.0.0",
+    "nock": "^10.0.0",
+    "nodemon": "^1.17.2",
+    "smee-client": "^1.0.2",
+    "standard": "^12.0.1"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
