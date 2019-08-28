@@ -1,0 +1,271 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "extends": ["eslint:recommended","plugin:react/recommended"],
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "no-case-declarations": 0,
+    "react/prop-types":0,
+    "react/no-set-state":1,
+    "semi": "error",
+    "brace-style": [
+      1,
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "block-scoped-var": 1,
+    "block-spacing": [
+      1,
+      "always"
+    ],
+    "comma-dangle": [
+      2,
+      "never"
+    ],
+    "no-cond-assign": [
+      2,
+      "except-parens"
+    ],
+    "no-console": 1,
+    "no-constant-condition": 2,
+    "no-control-regex": 2,
+    "no-debugger": 2,
+    "no-dupe-args": 2,
+    "no-dupe-keys": 2,
+    "no-duplicate-case": 2,
+    "no-empty-character-class": 2,
+    "no-empty": 1,
+    "no-ex-assign": 2,
+    "no-extra-boolean-cast": 2,
+    "no-extra-semi": 1,
+    "no-func-assign": 2,
+    "no-inner-declarations": [
+      0,
+      "both"
+    ],
+    "no-invalid-regexp": 2,
+    "no-irregular-whitespace": 2,
+    "no-negated-in-lhs": 2,
+    "no-obj-calls": 2,
+    "no-regex-spaces": 2,
+    "no-sparse-arrays": 2,
+    "no-unreachable": 2,
+    "use-isnan": 2,
+    "valid-typeof": 2,
+    "object-property-newline": 1,
+    "object-curly-spacing": [
+      1,
+      "always"
+    ],
+    "curly": [
+      "error",
+      "all"
+    ],
+    "eqeqeq": [
+      1,
+      "allow-null"
+    ],
+    "no-alert": 1,
+    "no-else-return": 1,
+    "no-extend-native": 1,
+    "no-fallthrough": 2,
+    "no-self-compare": 1,
+    "no-useless-call": 1,
+    "wrap-iife": [
+      1,
+      "any"
+    ],
+    "no-delete-var": 2,
+    "no-undef": 2,
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "none",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "arrow-parens": [
+      1,
+      "as-needed"
+    ],
+    "arrow-spacing": [
+      1,
+      {
+        "after": true
+      }
+    ],
+    "no-param-reassign": "error",
+    "constructor-super": 1,
+    "generator-star-spacing": 1,
+    "no-class-assign": 1,
+    "no-const-assign": 1,
+    "no-this-before-super": 1,
+    "prefer-const": 1,
+    "prefer-spread": 1,
+    "require-yield": 1,
+    "key-spacing": [
+      1,
+      {
+        "beforeColon": false,
+        "afterColon": true,
+        "mode": "minimum"
+      }
+    ],
+    "keyword-spacing": [
+      1,
+      {
+        "after": true,
+        "before": true
+      }
+    ],
+    "func-call-spacing": [
+      1,
+      "never"
+    ],
+    "space-in-parens": [
+      1,
+      "never"
+    ],
+    "space-before-blocks": [
+      1,
+      "always"
+    ],
+    "space-before-function-paren": [
+      1,
+      {
+        "anonymous": "always",
+        "named": "never"
+      }
+    ],
+    "no-multi-spaces": 0,
+    "padded-blocks": [
+      1,
+      "never"
+    ],
+    "indent": [
+      1,
+      4,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": [
+      1,
+      "unix"
+    ],
+    "array-bracket-spacing": [
+      1,
+      "never"
+    ],
+    "computed-property-spacing": [
+      1,
+      "never"
+    ],
+    "guard-for-in": "error"
+  },
+  "globals": {
+    "PageCloud": 1,
+    "PageCloudEvent": 1,
+    "PageCloudChrome": 1,
+    "PageCloudSiteManifest": 1,
+    "PageCloudConfig": 1,
+    "PageCloudCreateSiteDialog": 1,
+    "PageCloudNotifications": 1,
+    "PageCloudPageBrowser": 1,
+    "PageCloudGenericDialog": 1,
+    "PageCloud_EditPageBookmarklet": 1,
+    "PageCloud_ImportPageBookmarklet": 1,
+    "PageCloud_CreatePageBookmarklet": 1,
+    "BillingPage": 1,
+    "Browser": 1,
+    "Clipboard": 1,
+    "ajaxifyForms": 1,
+    "$": 1,
+    "jQuery": 1,
+    "srcDoc": 1,
+    "CKEDITOR": 1,
+    "Mousetrap": 1,
+    "_": 1,
+    "Intercom": 1,
+    "tinycolor": 1,
+    "Spinner": 1,
+    "rangy": 1,
+    "Iuppiter": 1,
+    "moment": 1,
+    "navigator": 1,
+    "alert": 1,
+    "confirm": 1,
+    "console": 1,
+    "window": 1,
+    "global": 1,
+    "document": 1,
+    "HTMLElement": 1,
+    "setTimeout": 1,
+    "clearTimeout": 1,
+    "setInterval": 1,
+    "clearInterval": 1,
+    "Promise": 1,
+    "XMLHttpRequest": 1,
+    "Blob": 1,
+    "Uint8Array": 1,
+    "ArrayBuffer": 1,
+    "FileReader": 1,
+    "localStorage": 1,
+    "Node": 1,
+    "ace": 1,
+    "MD5": 1,
+    "URI": 1,
+    "Sanitize": 1,
+    "S3FileUpload": 1,
+    "Stripe": 1,
+    "require": 1,
+    "module": 1,
+    "suite": 1,
+    "setup": 1,
+    "suiteSetup": 1,
+    "suiteTeardown": 1,
+    "teardown": 1,
+    "test": 1,
+    "assert": 1,
+    "sinon": 1,
+    "mocha": 1,
+    "chai": 1,
+    "helpers": 1,
+    "CustomEvent": 1,
+    "fetch": 1,
+    "InputEditable": 1,
+    "swal": 1,
+    "A11yDialog": 1,
+    "mixpanel": 1,
+    "Headers": 1,
+    "Sortable": 1,
+    "DOMParser": 1,
+    "Image": 1,
+    "localConfig": 1,
+    "modalOn": 1,
+    "modalOff": 1,
+    "flattenErrors": 1,
+    "Domains": 1,
+    "io": 1,
+    "describe": 1,
+    "it": 1,
+    "context": 1,
+    "before": 1,
+    "after": 1
+  }
+}

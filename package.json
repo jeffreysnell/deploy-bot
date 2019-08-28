@@ -4,9 +4,9 @@
   "description": "A probot app that opens merge PRs from staging to master automatically.",
   "author": "Jeff Snell <jeff.snell@pagecloud.com>",
   "license": "ISC",
-  "repository": "https://github.com//deploy-bot.git",
-  "homepage": "https://github.com//deploy-bot",
-  "bugs": "https://github.com//deploy-bot/issues",
+  "repository": "https://github.com/jeffreysnell/deploy-bot.git",
+  "homepage": "https://github.com/jeffreysnell/deploy-bot",
+  "bugs": "https://github.com/jeffreysnell/deploy-bot/issues",
   "keywords": [
     "probot",
     "github",
@@ -20,6 +20,7 @@
     "test:watch": "jest --watch --notify --notifyMode=change --coverage"
   },
   "dependencies": {
+    "lodash": "^4.17.15",
     "probot": "^7.2.0"
   },
   "devDependencies": {
