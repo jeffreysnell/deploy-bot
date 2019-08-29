@@ -117,7 +117,7 @@ const updateBotPr = async (app, context, pr) => {
         table += commits.data.map(commit => {
             const sha = commit.sha.substr(0, 10);
             const user = get(commit, "author.login", "");
-            const message = get(commit, "commit.message", "").substr(0, 80).replace(/[|\n]/g, " ");
+            const message = get(commit, "commit.message", "").substr(0, 80).replace(/[|\n\r]/g, " ").trim();
             return `| ${sha} | ${user} | ${message} |`;
         }).join('\n');
         return await context.github.pullRequests.update({
