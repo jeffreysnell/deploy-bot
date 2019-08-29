@@ -4,7 +4,11 @@
 > Check the probot documentation for application setup instructions
 
 This bot monitors your staging branch and master branch and automatically creates PRs and keeps those PRs up to date so that you can merge the content
-from staging onto master.  
+from staging onto master. 
+
+It includes a table with the contents of the PR, note that by using these shas the 
+feature PRs where were merged into your staging branch will be updated
+with a reference to this staging->master merge   
 
 | SHA | User | Commit message | 
 |:---|:---|:---|
