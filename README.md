@@ -1,6 +1,17 @@
 # deploy-bot
 
 > A GitHub App built with [Probot](https://github.com/probot/probot) that A probot app that opens merge PRs from staging to master automatically.
+> Check the probot documentation for application setup instructions
+
+This bot monitors your staging branch and master branch and automatically creates PRs and keeps those PRs up to date so that you can merge the content
+from staging onto master.  
+
+| SHA | User | Commit message | 
+|:---|:---|:---|
+| 048a9b916a | jeffreysnell | Don't need this |
+| d21f806157 | jeffreysnell | A commit to test deploy bot |
+| db0fd68e07 | jeffreysnell | Adding a change for depoy bot |
+| 41054c88fc | jeffreysnell | Merge pull request #11 from jeffreysnell/some-new-branch  Some new branch that I |
 
 ## Setup
 
@@ -12,12 +23,14 @@ npm install
 npm start
 ```
 
-## Contributing
 
-If you have suggestions for how deploy-bot could be improved, or want to report a bug, open an issue! We'd love all and any contributions.
+##Deploying the bot locally on localhost:3030
+```sh
+Follow instructions in .env.example to configure the bot and connect
+it to github webhooks
 
-For more, check out the [Contributing Guide](CONTRIBUTING.md).
+npm run dev
+```
 
-## License
 
-[ISC](LICENSE) © 2019 Jeff Snell <jeff.snell@pagecloud.com>
+
