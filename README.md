@@ -1,3 +1,5 @@
+[Internal Documentation](https://pagecloud.atlassian.net/wiki/spaces/PP/pages/101974017/pagecloud-deploy-bot)
+
 # deploy-bot
 
 > A GitHub App built with [Probot](https://github.com/probot/probot) that A probot app that opens merge PRs from staging to master automatically.
