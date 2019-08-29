@@ -1,20 +1,17 @@
 const get = require("lodash/get");
 const sortBy = require("lodash/sortBy");
+const moment = require("moment");
+require("moment-timezone");
 
 const STAGING_BRANCH = process.env.STAGING_BRANCH;
 const MASTER_BRANCH = process.env.MASTER_BRANCH;
 const OWNER = process.env.OWNER;
+const TIMEZONE = process.env.TIMEZONE || "America/Toronto";
 
 const TABLE_HEADER = `| SHA | User | Commit message | \n|:---|:---|:---|\n`;
 
 const TITLE_KEY = "Production Deploy (deploy-bot):";
-const TITLE_TEMPLATE = (date = new Date()) => TITLE_KEY + " " + date.toLocaleDateString('en-US', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric'
-});
+const TITLE_TEMPLATE = (date = new Date()) => TITLE_KEY + " " + moment(date).tz(TIMEZONE).format("MMMM DD YYYY HH:mm")
 
 /**
  * Get the ref from the payload, only tested with pull and pull_request events
