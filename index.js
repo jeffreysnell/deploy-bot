@@ -75,7 +75,8 @@ const getBotPrs = async (context) => {
 const getPRCommits = async (context, pr) => {
     return await context.github.pullRequests.listCommits({
         ...defaultParams(context),
-        number: pr.number
+        number: pr.number,
+        per_page:100
     });
 };
 
