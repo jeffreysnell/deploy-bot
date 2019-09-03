@@ -167,15 +167,7 @@ module.exports = app => {
         }
         return createOrUpdateBotPr(app, context);
     });
-
-    app.on(['pull_request.closed'], async (context) => {
-        //Check if the pr we just closed was merged into staging.
-        if (!isStaging(context)) {
-            app.log("PR does not target the staging branch");
-            return;
-        }
-        return createOrUpdateBotPr(app, context);
-    });
+    
     app.on(['pull_request.synchronize'], async (context) => {
         //This is called when the list of commits is updated on any pr so we will filter to only staging prs
         if (!isStaging(context, "head")) {
